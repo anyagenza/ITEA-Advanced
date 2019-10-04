@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(Test LANGUAGES CXX)
+project(TestIt LANGUAGES CXX)
 
 
 
@@ -22,9 +22,9 @@ endif ()
 
 include_directories(${GTestSrc} ${GTestSrc}/include ${GMockSrc} ${GMockSrc}/include)
 
-add_executable(Test main.cpp FunctionsForTest.cpp FunctionsForTest.h tst_test.h
+add_executable(TestIt main.cpp tst_testit.h tree.h tree.cpp IsExpValid.h IsExpValid.cpp
                ${GTestSrc}/src/gtest-all.cc
                ${GMockSrc}/src/gmock-all.cc)
-add_test(Test COMMAND Test)
-target_link_libraries(Test PRIVATE Threads::Threads)
+add_test(TestIt COMMAND TestIt)
+target_link_libraries(TestIt PRIVATE Threads::Threads)
 

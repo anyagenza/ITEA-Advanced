@@ -1,7 +1,6 @@
-#include "tst_test.h"
+#include "tst_testit.h"
 
 #include <gtest/gtest.h>
-
 
 int main(int argc, char *argv[])
 {
